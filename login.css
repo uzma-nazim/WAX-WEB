@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* ///here you can background pic */
+
+.loginconatiner{
+    background: 
+    
+    linear-gradient(
+      rgba(0, 0, 0, .2), 
+      rgba(0, 0, 0, 0.2)
+    ),
+    url('./Images/background.png') no-repeat;
+    background-size: cover;
+    font-size: 62.5%;
+    
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 100px;
+}
+.miniCpntainer{
+    width: 400px;
+    height: 250px;
+
+    /* border: 1px solid red; */
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+    background-color: rgb(227, 241, 239 ,0.6);
+}
+.dropBG ,.menubg{
+    background-color: #E7E1E1 !important  ;
+    color: #9e6323 !important;
+    border: 1px solid #DA862C !important;
+    font-weight: bolder !important;
+    padding: 10px 10px !important;
+    width: 250px !important ;
+
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around !important;
+}
+.dropdown-item{
+    color: #945e25 !important;
+
+    font-weight: bolder !important;
+    
+}
+.miniCpntainer h4{
+    color: #FFF7FC;
+    font-weight: bolder;
+    
+    text-shadow: -4px 4px 2px rgba(112,70,25);
+    
+
+
+}
+
+.dropdown-toggle::after {
+    
+    margin-left: 3em !important;
+    font-weight: bolder;
+}

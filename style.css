@@ -2,10 +2,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: 'Macondo', cursive;
 
 }
-.mainContainer{
+body{
     background: 
     
     linear-gradient(
@@ -17,7 +18,7 @@
     font-size: 62.5%;
     
     width:100%;
-    height:auto;
+    height:100%;
 }
 
 
@@ -87,10 +88,12 @@
     border-radius: 25px;
     padding: 15px;
     width: 310px;
+    font-family: sans-serif;
 }
 .user-info  p{
     line-height: 1px;
     margin-top: 20px;
+    
     /* margin-bottom:3px; */
 
 }
@@ -142,7 +145,7 @@
 .side-bar{
     width: 80px;
     background: rgba(30, 30, 30, 0.8);
-    height: 470px;
+    height: 480px;
     margin:10px;
     border-radius: 20px;
     padding: 10px;
@@ -194,7 +197,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     
-    
+    position: relative;
     
 }
 .imgBtn{
@@ -213,7 +216,7 @@
     height: 420px;
     
       background-image: url(./Images/black\ farme.png);
-    background-repeat: no-repeat;
+      background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
@@ -256,7 +259,7 @@
     justify-content:space-evenly;
     align-items: center;
     /* border: 1px solid red; */
-
+    
     height: 690px;
     align-items: center;
     
@@ -265,15 +268,16 @@
     
 }
 .nftcontainer{
-    width: 2250px;
-    
+    width: 3050px;
     
     /* transform: translateX(0px); */
-    overflow:hidden;
     
+    
+    /* border: 1px solid red; */
 }
 .hideConten{
-    /* overflow-x:auto; */
+    
+    
     overflow-x:auto;
     width: 95%;
     overflow-y: hidden;
@@ -284,10 +288,64 @@
 
 }
 .hideConten::-webkit-scrollbar {
-
-    width:50px ;
-
     
+    width:100%  !important;
+    /* height: 1px; */
+    position: relative;
+    
+    
+}
+.hideConten::-webkit-scrollbar-track-piece:end {
+    margin-right: -260px !important; 
+}
+.hideConten::-webkit-scrollbar-track-piece:start {
+    
+    margin-left: -260px !important; 
+}
+@media only screen and (max-width: 1000px){
+    .hideConten::-webkit-scrollbar-track-piece:end {
+        margin-right: -190px !important; 
+    }
+    .hideConten::-webkit-scrollbar-track-piece:start {
+        
+        margin-left: -190px !important; 
+      }
+}
+@media only screen and (max-width: 836px){
+    .hideConten::-webkit-scrollbar-track-piece:end {
+        margin-right: -150px !important; 
+    }
+    .hideConten::-webkit-scrollbar-track-piece:start {
+        
+        margin-left: -150px !important; 
+      }
+}
+@media only screen and (max-width: 684px){
+    .hideConten::-webkit-scrollbar-track-piece:end {
+        margin-right: -110px !important; 
+    }
+    .hideConten::-webkit-scrollbar-track-piece:start {
+        
+        margin-left: -110px !important; 
+      }
+}
+@media only screen and (max-width: 542px){
+    .hideConten::-webkit-scrollbar-track-piece:end {
+        margin-right: -80px !important; 
+    }
+    .hideConten::-webkit-scrollbar-track-piece:start {
+        
+        margin-left: -80px !important; 
+      }
+}
+@media only screen and (max-width: 438px){
+    .hideConten::-webkit-scrollbar-track-piece:end {
+        margin-right: -60px !important; 
+    }
+    .hideConten::-webkit-scrollbar-track-piece:start {
+        
+        margin-left: -60px !important; 
+      }
 }
 .hideConten::-webkit-scrollbar-track{
     background-image: url(./Images/stick.png);
@@ -295,24 +353,27 @@
     background-position: center;
     
     background-size: cover;
+    /* margin-left: 200px; */
+    /* margin-right: 100px; */
 }
 
-.modalContent::-webkit-scrollbar{
+.modalContent::-webkit-scrollbar ,.shopContainer::-webkit-scrollbar {
     width:10px ;
 
-
+    
 }
-.modalContent::-webkit-scrollbar-track{
+.modalContent::-webkit-scrollbar-track ,.shopContainer::-webkit-scrollbar-track {
     background-image: url(./Images/stick2.png);
     
 }
-.hideConten::-webkit-scrollbar-thumb ,.modalContent::-webkit-scrollbar-thumb{
-
+.hideConten::-webkit-scrollbar-thumb ,.modalContent::-webkit-scrollbar-thumb ,.shopContainer::-webkit-scrollbar-thumb {
+    
     /* background-color: #2D6249; */
     border-radius: 20px;
-    background-image: url(./Images/icons/Asset\ 1.png);
+    background-image: url(./Images/Asset\ 1.png);
     background-repeat: no-repeat;
-      width: 60%;
+    width: 60%;
+    
       background-size:contain;
     background-position: center;
     
@@ -367,7 +428,7 @@
     width: 55px;
     height: 55px;
     border: 0;
-    background: url('./Images/icons/Asset\ 1.png');
+    background: url('./Images/Asset\ 1.png');
     cursor: pointer;
   }
   
@@ -375,13 +436,14 @@
     height: 50px;
     width: 50px;
     border: 0;
-    background: url('./Images/icons/Asset\ 1.png');
+    background: url('./Images/Asset\ 1.png');
     cursor: pointer;
   }
   .modalContent{
       height: 500px;
       width: 100%;
       overflow-y: auto;
+      overflow-x: hidden;
     }
     .modalContent h1{
         text-align: center;
@@ -390,6 +452,10 @@
     .cardnftconatiner{
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .yournftcard1{
+        margin: 10px;
     }
     .your-nft-bg{
         background-color: rgb(157, 158, 161 ,0.7) !important;
@@ -401,6 +467,7 @@
     }
     .yournft{
         width: 150px;
+        padding: 10px;
         height: 150px;
         border-radius: 50%;
         background-color: #4E4C4E;
@@ -520,30 +587,22 @@
         border-radius: 20px;
         /* border: 1px solid red; */
         background-image: linear-gradient(
-  180deg,
-  hsl(202deg 80% 37%) 0%,
-  hsl(204deg 59% 43%) 7%,
-  hsl(206deg 48% 47%) 16%,
-  hsl(207deg 42% 51%) 28%,
-  hsl(208deg 41% 54%) 41%,
-  hsl(209deg 41% 58%) 53%,
-  hsl(209deg 40% 61%) 62%,
-  hsl(210deg 40% 64%) 70%,
-  hsl(210deg 40% 67%) 76%,
-  hsl(211deg 40% 70%) 81%,
-  hsl(211deg 40% 73%) 85%,
-  hsl(211deg 40% 76%) 88%,
-  hsl(212deg 39% 79%) 91%,
-  hsl(212deg 39% 82%) 93%,
-  hsl(212deg 39% 85%) 95%,
-  hsl(212deg 39% 88%) 97%,
-  hsl(213deg 39% 91%) 98%,
-  hsl(213deg 39% 94%) 99%,
-  hsl(213deg 39% 97%) 100%,
-  hsl(0deg 0% 100%) 100%
-  
-);
-
+            180deg,
+            hsl(194deg 95% 22%) 0%,
+            hsl(195deg 81% 27%) 11%,
+            hsl(195deg 72% 32%) 22%,
+            hsl(194deg 66% 37%) 33%,
+            hsl(194deg 62% 42%) 45%,
+            hsl(194deg 59% 46%) 56%,
+            hsl(193deg 59% 51%) 67%,
+            hsl(193deg 69% 56%) 78%,
+            hsl(192deg 81% 61%) 89%,
+            hsl(192deg 97% 65%) 100%
+          );
+          
+}
+.timing p{
+    -webkit-text-stroke: 0.6px #00000099 !important;
 }
 .two-btn{
         
@@ -602,8 +661,10 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 .contentBG{
+    border: none;
     /* border: 1px solid red; */
     background-image: url(./Images/hp-bg.png);
     background-repeat: no-repeat;
@@ -618,6 +679,9 @@
 }
 .red{
     color: red;
+}
+.shopborder{
+    height: 80vh !important;
 }
 @media only screen and (max-width: 1100px){
     /*Tablets [601px -> 1200px]*/
@@ -644,6 +708,9 @@
     /* background-size: 98% 90% !important;  */
     width: 87% !important;
 }
+.blending{
+    height: 600px !important;
+}
 
 }
 
@@ -651,6 +718,9 @@
 .sliderBorder{
     /* background-size: 98% 90% !important;  */
     width: 86% !important;
+}
+.blending{
+    height: 650px !important;
 }
 
 }
@@ -691,20 +761,43 @@
         width: 84% !important;
         background-size: 100% 92% !important;
     }
+    .withrawConatiner{
+        background-size: 100% 95% !important;
+
+
+    }
+    .shopborder{
+        background-size: 100% 100% !important;
+    }
+    
     .nftcards{
         height: 630px !important    ;
     }
     .hideConten{
         width: 93%;
+    }.sleepingcard{
+        /* border: 1px solid red; */
+        height: 534px !important;
+    }
+    .carft{
+        bottom: 65px !important;
+        left: 7px !important;
+        width: 100px !important;
+
+    }
+    .cardyBox{
+        bottom: 105px !important;
+        left: 10px !important;
+        height: 170px !important;
     }
 }
 @media only screen and (max-width: 570px){
 
     .sliderBorder{
         width: 81% !important;
-        background-size: 100% 92% !important;
-
+    
     }
+
     .two-lines{
         padding: 0px 3px !important;
         /* margin: px !important; */
@@ -717,10 +810,33 @@
         padding: 5px !important;
         font-size: 12px !important;
     }
+    .nftHeading h1{
+        font-size: 20px;
+
+    }
+    .blending{
+        height: 600px !important;
+    }
 }
 @media only screen and (max-width: 540px){
     .nftcontainer{
         width: 2000px !important;
+    }
+    .side-bar a{
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        
+    }
+    .side-bar {
+        width: 60px;
+        height: 360px;
+        border-radius: 15px;
+    }
+    .tentcard1 img{
+     width: 170px;
+     margin-left: 15px;
+
     }
 }
 @media only screen and (max-width: 496px){
@@ -764,6 +880,7 @@
 .timing img{
     width: 13px;
 }
+
 .imgBtn{
     /* justify-content: space-evenly !important; */
     margin-left: -10px !important;
@@ -773,8 +890,969 @@
     
     margin: 0px;
 }
+.blending{
+    height: 550px !important;
+}
 }
 @media only screen and (max-width: 431px){
     .sliderBorder{
         width: 78% !important;}
+}
+
+
+
+
+/* ///blanding Section */
+
+.blingingContent{
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    /* border: 1px solid red; */
+}
+.cardyBox{
+    width: 140px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.5);
+
+    border-radius: 20px;
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.cardyBox p{
+    font-size: 18px;
+}
+.nftBox{
+    width: 160px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    
+}
+.nftBox img{
+    width: 100%;
+}
+.nftBtn{
+    position: absolute;
+    bottom: 30px;
+    left:45%;
+}
+.nftcircle1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    background-color: rgb(0, 0, 0,0.5);
+    border: 1px solid rgb(128, 128, 128 ,0.6);
+    padding: 10px;
+}
+.nftcircle1 img{
+    width: 100%;
+}
+.circlesNft{
+    display: flex;
+    justify-content: space-evenly;
+}
+.lines{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.your-nft-bg2{
+    /* border: 1px solid red; */
+    background: #999999 !important;
+
+    
+
+}
+@media only screen and (max-width: 875px){
+    .nftcircle1{
+        width: 100px !important;
+        height: 100px;
+    }
+    .nftcircle1 img{
+        /* width: 90%; */
+    }
+
+}
+@media only screen and (max-width: 663px){
+    .nftBtn{
+        bottom: 90px;
+    }
+
+    .cardyBox{
+        bottom: 100px;
+
+        width: 120px ;
+        height: 170px;
+        left: 15px;
+
+    }
+}
+
+
+
+/* ///withDraw and Deposite */
+
+.withrawConatiner{
+    height:85vh;
+
+
+}
+.dipositeContner{
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: space-around;
+    /* border: 1px solid red; */
+
+
+}
+
+
+.feeBox{
+    width: 160px;
+    height: 50px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    background-color:#A1A6AD;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 30px; */
+    
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+}
+.feeBox h4{
+    font-size: 30px;
+    font-weight: 400;
+
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.buttons img{
+    width: 140px;
+}
+.hpAmount{
+    width: 140px;
+    height: 50px;
+    background-color:#AFAFAF;
+    border-radius: 10px;
+    display: flex;
+    
+}
+.arrow{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.arrow img{
+    width: 80px;
+}
+.hpAmount input{
+    /* text-align: center; */
+    padding-left: 20px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+.amountofdeposi p{
+    font-size: 20px;
+    color: #ddd;
+    margin-top: -70px;
+
+}
+.amountofdeposi{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-around;
+}
+.RECIEVE{
+    margin: 0px !important;
+}
+.heading{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    display: none;
+}
+
+.greenDep{
+    margin-left: 30px;
+
+
+}
+
+@media only screen and (max-width: 878px){
+
+    .feeBox{
+        width: 130px;
+        height: 40px;
+        
+    }
+    .feeBox h4{
+        font-size: 19px;
+        padding-top: 8px;
+    }
+    .amountofdeposi p{
+        display: none;
+    }
+    .heading{
+        display: block;
+    }
+}
+
+        
+@media only screen and (max-width: 731px){
+.feeBox{
+    width: 80px;
+    height: 30px;
+                
+    left: 12px;
+    border-radius: 5px;
+   }
+   .feeBox h4{
+       font-size: 14px;
+   }
+   .buttons img{
+       width: 80px;
+   }
+}
+@media only screen and (max-width: 584px){
+    .hpAmount{
+        width: 100px;
+        height: 40px;
+        border-radius: 6px;
+    }
+    .hpAmount img{
+        width: 30px ;
+        /* object-fit: contain; */
+    }
+    .arrow img{
+        width: 60px;
+    }
+    .heading{
+        font-size: 14px;
+    }
+    .greenDep{
+        width: 130px;
+    }
+}
+@media only screen and (max-width: 459px){
+    .hpAmount{
+        width: 80px;
+        height: 40px;
+        border-radius: 6px;
+    }
+    .hpAmount img{
+        width: 30px ;
+        /* object-fit: contain; */
+    }
+    .arrow img{
+        width: 30px;
+    }
+    .heading{
+        font-size: 12px;
+    }
+    .feeBox{
+        width: 50px;
+        height: 25px;
+                    
+        left: 12px;
+        border-radius: 5px;
+       }
+       .feeBox h4{
+        font-size: 11px;
+    }
+}
+
+#withDraw{
+    display: none;
+}
+
+
+
+
+/* ///SHOP */
+
+.shopContainer{
+    width: 75%;
+    height: 70vh !important;
+    margin-top: 30px !important;
+    margin-top: 20px;
+    /* border: 1px solid red; */
+    margin-left: 20px;
+    overflow-y: auto;
+}
+.shopHide{
+
+    overflow-y:auto ;
+    overflow-x: hidden;
+}
+.nftImg{
+    width: 150px;
+    border-radius: 50%;
+
+    background-color: rgb(0, 0, 0,0.5);
+    border: 1px solid rgb(128, 128, 128 ,0.6);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.nftImg h1{
+    color: #7D7F80;
+    -webkit-text-stroke: 0.2px #ffff !important;
+
+}
+.itme1{
+    width: 150px;
+    margin: 10px;
+
+    text-align: center;
+}
+.itme1 p{
+    color: #fff;
+
+    font-size: 15px;
+}.Shop-row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.timer{
+    width: 150px;
+    text-align: center;
+    padding: 2px;
+    background-color: #9FA6AD;
+    border-radius: 30px;
+}
+.timer h4{
+    padding-top: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    /* -webkit-text-stroke-width: 1px; */
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+
+}
+.timerConatiner{
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 70px;
+    top: 30px;
+}
+.timerConatiner p{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+.shopmain{
+
+    
+}
+.buySellbtn{
+    position: absolute;
+    right: 90px;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 60px;
+
+}
+.mobBuySell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    display: none;
+}
+.mobBuySell img{
+    margin-right: 70px;
+}
+@media only screen and (max-width: 1100px){
+    .shopContainer{
+        height: 410px;
+    }
+    .buySellbtn{
+  
+        display: none;
+    }
+    .mobBuySell{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .timerConatiner{
+        display: none;
+    }
+    .shopborder{
+        height: 90vh !important;
+    }
+}
+@media only screen and (max-width: 580px){
+    .mobBuySell img{
+        margin-right: 20px;
+        width: 90px;
+    }
+}
+
+
+#buy {
+    display: none;
+}
+
+
+/* ////lEVEL UP SECTION */
+.levelbutton {
+    /* border: 1px solid red; */
+    display: block;
+}
+.xpbar{
+    width: 210px;
+    margin-left: 50px;
+    height: 15px;
+    border-radius: 20px;
+    /* background-color: #2D6249; */
+    background-image: linear-gradient(
+  0deg,
+  hsl(274deg 73% 42%) 0%,
+  hsl(277deg 53% 72%) 79%,
+  hsl(0deg 0% 100%) 100%
+  );
+  text-align: start ;
+}
+.xpbar span{
+
+    background-color: rgb(0, 0, 0 ,0.3);
+    padding: 4px;
+    color: #fff;
+}
+.levelup{
+    width: 75%;
+
+
+}
+.xpfBox{
+    width: 200px;
+    height: 200px;
+    background-color:rgb(83, 49, 108 ,0.8);
+    border-radius: 20px;
+    border: 3px solid #BC26C3;
+    
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.xpfShopBox{
+    width: 200px;
+    height: 200px;
+    background-color:#9FA49D;
+    border-radius: 20px;
+    
+    
+
+}
+.icon1{
+    width: 70px;
+    height: 70px;
+    background-color: #4E4C4E;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.twoicons{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 0px 10px;
+    margin-left: 70px;
+}
+.xpfShopBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.xpfShopBox h6{
+    word-spacing: 3px;
+
+    text-align: center;
+    font-size: 20px;
+}
+.purple{
+    color: #BC26C3;
+}
+.xpfBox h4{
+    font-size: 20px;
+    font-weight: 500    ;
+
+
+}
+.bootel{
+    width: 70px;
+    height: 70px;
+    background-color:rgb(83, 49, 108 ,0.8);
+    border-radius: 50%;
+    border: 3px solid #BC26C3;
+    
+
+}
+.twoBox{
+    position: absolute;
+    top: 90px;
+    right: 40px;
+}
+
+.MobtwoBox{
+    display:none;
+
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+.MobtwoBox div{
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 1115px){
+    .levelupboder{
+        height: 1000px ;
+        /* border: 1px solid red; */
+    
+    }
+    .MobtwoBox{
+        display: flex;
+    }
+    .twoBox{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 653px){
+    .xpfBox{
+        width: 150px;
+        height: 150px;
+
+    }
+    .levelupboder{
+        height: 930px ;
+        /* border: 1px solid red; */
+    
+    }
+        .bootel{
+            width: 40px;
+            height: 40px;
+        }
+        .xpfBox h4{
+            font-size: 14px;
+        }
+        .xpfShopBox{
+            width: 150px;
+            height: 150px;
+        }
+        .icon1{
+            width: 30px;
+            margin-right: 0px;
+            height: 30px;
+        }
+        .xpfShopBox h6{
+            font-size: 12px;
+        }
+        .nftcircle1{
+            width: 90px !important;
+            height: 90px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nftcircle1 img{
+            width: 80%;
+        }
+}
+
+@media only screen and (max-width: 547px){
+    .xpfBox{
+        width: 100px;
+        height: 100px;
+
+    }
+    
+        .bootel{
+        display: none;
+        }
+        .xpfBox h4{
+            font-size: 11px;
+            text-align: center;
+        }
+        .xpfShopBox{
+            width: 100px;
+            height: 100px;
+        }
+        .icon1{
+            width: 20px;
+            margin-right: 0px;
+            height: 20px;
+        }
+        .xpfShopBox h6{
+            font-size: 10px;
+        }
+        .nftcircle1{
+            width: 70px !important;
+            /* border-radius: 50%; */
+            height: 70px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nftcircle1 img{
+            width: 100% !important;
+        }
+    }
+
+
+
+    .rentTimer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .rentthisplace{
+
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .rentthisplace img{
+        width: 300px;
+
+    }
+    .chooseHome{
+        background-color: #CDCDCD;
+        border-radius: 20px;
+    }
+    .btnDiv{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    .btnDiv img{
+        width: 210px;
+
+
+    }
+    .choosHeading h1{
+        font-family: sans-serif;
+        font-weight: 400;
+
+        text-align: center;
+
+
+    }
+    .choosHeading h4{
+        font-family: sans-serif;
+        font-weight: 500;
+        
+
+    }
+    .thirteen{
+        background-color: black;
+        color: #fff;
+        width: 60px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 20px;
+        font-family: sans-serif;
+    }
+    .renthouse-bg{
+        background-color: #CCCECD;
+    }
+    .tentcard1{
+        margin: 10px;
+    }
+    .tent{
+        width: 200px;
+        height: 200px;
+        background-color: #67686A;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content:space-between;
+        
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .tent h1{
+        text-align: center;
+        color: #fff;
+        font-family: sans-serif;
+    }
+    .tent img{
+        margin: 8px;
+
+    }
+    .tent h4{
+        border: 4px solid black;
+
+        padding: 4px 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin: 0px !important ;
+        background-color: #FFFFFF;
+
+    }
+    .tentModal{
+        width: 75%;
+    }
+    .threbuttons{
+        width: 240px;
+        height: 250px;
+        padding: 10px;
+        border-radius: 20px;
+
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .threbuttons button{
+        width: 190px;
+        margin: 10px;
+
+        border-radius: 45px;
+
+        border: none;
+        font-size: 28px;
+        font-family: sans-serif;
+        padding: 10px 15px;
+        background-color: #fff;
+
+    }
+    .rentContent{
+        position: relative;
+    }
+    
+    .mobilebtn{
+        display: none;
+    }
+    .rentContent{
+        display: flex;
+        justify-content: space-between;
+    }
+    @media only screen and (max-width: 570px){
+        .threbuttons{
+            width: 150px;
+            height: 150px;
+        }
+            .threbuttons button{
+                width: 130px;
+                font-size: 14px;
+                padding: 5px !important; 
+            }
+            .rentthisplace img{
+                width: 200px !important;
+        
+            }    
+    }
+    @media only screen and (max-width: 448px){
+        .threbuttons{
+            width: 120px;
+            height: 140px;
+        }
+            .threbuttons button{
+                width: 100px;
+                font-size: 11px;
+                padding: 5px !important; 
+            }
+            .nftcircle1{
+                width: 60px !important;
+                /* border-radius: 50%; */
+                height: 60px !important;}
+    }
+
+
+    .nftPic{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        width: 250px;
+        height: 250px;
+        border-radius: 25px;
+        background-color: #000;
+        margin: 10px;
+    }
+    .nftcontent h3 ,.givedetails h4{
+        font-weight:500;
+        font-family: sans-serif;
+
+        color: #000;
+    }
+    .nftcontent button{
+        width: 160px;
+        border: none;
+        padding: 5px 20px;
+        background-color: #4D4D4D;
+        border-radius: 25px;
+        font-size: 15px;
+        color: #000;
+        font-family: sans-serif;
+    }
+    .nftdetails{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        padding: 10px 15px;
+        flex-wrap: wrap;
+
+    }
+    .givedetails{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .input1{
+        text-align: center;
+        border: 3px solid black;
+
+        border-radius: 44%;
+        padding: 10px;
+        width: 60px;
+
+        height: 50px;
+
+        background-color: #fff;
+
+    }
+    .input2{
+        text-align: center;
+        border: 3px solid black;
+
+        border-radius: 120px;
+
+        padding: 13px;
+        width: 120px;
+
+        height: 50px;
+
+        background-color: #fff;
+
+    }
+    ::placeholder{
+        color: #000;
+    }
+.givedetails img{
+    width: 290px;
+}
+.sleepingcard{
+    /* border: 1px solid red; */
+    height: 570px;
+}
+
+
+.nftHeading h1{
+    font-family: sans-serif;
+    color: #000;
+}
+.stakebtn{
+    width: 150px;
+    background-color: #AE9900;
+    padding: 4px 5px;
+}
+.yellow{
+    width: 140px;
+    background-color: #FBFF36;
+    /* margin:5px 4px; */
+}
+.yellow span{
+    border: 1px solid black;
+    /* margin: 4px 4px ; */
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 3px 3px; */
+    font-size: 19px;
+
+    color: #AE9900;
+    font-weight: 500;
+}
+.shopbtn{
+    position: relative;
+}
+.gold{
+    position: absolute;
+    top: 1px;
+    left: 90px;
+}
+.tentcard1 img{
+    margin-top: 3px;
+}
+.nftwiarow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin: 10px;
+    position: relative;
+    
+}
+.carft{
+    position: absolute;
+    bottom: 20px;
+    margin: 5px;
+    left:20px ;
+    
+}
+.carftnft{
+    position: absolute;
+    bottom: 14px;
+    left: 40%;
+    
+}
+.carftingBox p{
+    line-height: 0.9px !important;
+    margin: 0px !important;
+}
+.tent{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
